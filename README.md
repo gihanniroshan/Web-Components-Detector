@@ -6,5 +6,5 @@ Detects WordPress version used in web application.
 
 
 Methods used to detect WP version: 
-* Using the Meta tag (generator) in the response body. ( <meta name="generator" content="WordPress 6.2" /> )
+* Using the Meta tag (generator) in the response body. ( `<meta name="generator" content="WordPress 6.2" />` )
 
