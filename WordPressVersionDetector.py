@@ -21,14 +21,16 @@ if detect_wordpress(url):
     #<meta name="generator" content="WordPress 6.2" />
     generator_tag = soup.find('meta', attrs={'name': 'generator'})
     if generator_tag:
-        version_number = generator_tag['content'].split('WordPress ')[1]
-        print("WordPress version number:", version_number)
+        content = generator_tag['content']
+        if 'WordPress ' in content:
+            version_number = generator_tag['content'].split('WordPress ')[1]
+            print("WordPress version number:", version_number)
+        else:
+            print("But WordPress version not found.")
     else:
         print("But WordPress version not found.")
 else:
     print(f"{url} does not appear to be a WordPress website.")
-
-
 
 
 
